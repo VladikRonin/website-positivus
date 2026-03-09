@@ -10,12 +10,12 @@
               <div class="service-card__text">
                 <h3 class="service-card__title"><span class="service-card__span">${s.title}</span></h3>
                 <a href="${s.link}" class="service-card__link">
-                  <img class="service-card__link-icon" src="./${s.linkIcon}" alt="Узнать больше">
+                  <img class="service-card__link-icon" src="${s.linkIcon}" alt="Узнать больше">
                   <span class="service-card__link-span">Learn more</span>
                 </a>
               </div>
-              <img class="service-card__img" src="./${s.img}" alt="Поисковая оптимизация">
-              <img class="service-card__img service-card__img--mobile" src="./${s.imgMobile}" alt="Поисковая оптимизация">
+              <img class="service-card__img" src="${s.img}" alt="Поисковая оптимизация">
+              <img class="service-card__img service-card__img--mobile" src="${s.imgMobile}" alt="Поисковая оптимизация">
             </div>
           </article>
         `,process:s=>`
@@ -28,8 +28,8 @@
                 <h2 class="process__name">${s.name}</h2>
               </div>
               <button class="process__toggle" aria-label="Показать/скрыть текст">
-                <img src="./src/img/icons/process/process__icon-minus.svg" alt="Закрыть текст" class="process__icon-minus">
-                <img src="./src/img/icons/process/process__icon-plus.svg" alt="Открыть текст" class="process__icon-plus">
+                <img src="src/img/icons/process/process__icon-minus.svg" alt="Закрыть текст" class="process__icon-minus">
+                <img src="src/img/icons/process/process__icon-plus.svg" alt="Открыть текст" class="process__icon-plus">
               </button>
             </div>
             <div class="process__body">
@@ -42,13 +42,13 @@
           <li class="team__item">
             <article>
               <div class="team__information">
-                <img src="./${s.img}" loading="lazy" alt="Изображение пользователя" class="team__img">
+                <img src="${s.img}" loading="lazy" alt="Изображение пользователя" class="team__img">
                 <div class="team__person">
                   <h3 class="team__name">${s.name}</h3>
                   <p class="team__post">${s.post}</p>
                 </div>
                 <a href="${s.link}" class="team__link" aria-label="Ссылка на LinkedIn">
-                  <img src="./src/img/icons/team/team__linkedin-icon.svg" alt="Ссылка на LinkedIn" class="team__icon">
+                  <img src="src/img/icons/team/team__linkedin-icon.svg" alt="Ссылка на LinkedIn" class="team__icon">
                 </a>
               </div>
               <p class="team__portfolio">${s.portfolio}</p>
