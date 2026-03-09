@@ -1,0 +1,15 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.menu {    
+    white-space: nowrap;
+    
+    &-list {
+        @include flex-row-center;
+        gap: 41px;
+
+        @media (max-width: 1150px) {
+            gap: 29px;
+        }
+    }
+}

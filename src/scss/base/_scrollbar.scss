@@ -1,0 +1,16 @@
+/* Делаем скроллбар "плавающим" поверх контента */
+.simplebar-track {
+  background: transparent !important; /* Убираем фон дорожки */
+}
+
+/* Настраиваем сам ползунок */
+.simplebar-scrollbar::before {
+  background: #000; /* Цвет ползунка под твой дизайн */
+}
+
+/* Теперь хедер и оверлей будут прижаты к самому краю */
+.header, .overlay {
+  width: 100%;
+  right: 0;
+  position: fixed;
+}

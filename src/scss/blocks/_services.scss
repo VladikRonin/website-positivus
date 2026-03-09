@@ -1,0 +1,43 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.services {
+    padding-top: 140px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__description {
+        max-width: 580px;
+    }
+
+    &__grid {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include fluid(grid-gap, 30px, 40px);
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        @media(max-width: 480px) {
+            margin-top: 40px;
+        }
+    }
+
+    &__proposal {
+        margin-top: 123.5px;
+
+        @media(max-width: 480px) {
+            margin-top: 94px;
+        }
+    }
+
+    @media(max-width: 768px) {
+        padding-top: 60px;
+    }
+}

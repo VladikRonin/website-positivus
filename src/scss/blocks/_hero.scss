@@ -1,0 +1,128 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.hero {
+    margin-top: 130px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // margin: auto;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 531px;
+        width: 100%;
+        gap: 35px;
+
+        @media (max-width: 768px) {
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+    }
+
+    &__title {
+        line-height: 128%;
+        letter-spacing: 0%;
+
+        @media (min-width: 1366px) {
+            max-height: 231px;
+            height: 100%;
+        }
+
+        @media ((max-width: 768px) and (min-width: 521px)) {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        @media (max-width: 400px) {
+            text-align: center;
+            font-size: 37px;
+        }
+
+        @media (max-width: 350px) {
+            font-size: 33px;
+        }
+    }
+
+    &__description {
+        max-width: 498px;
+        width: 100%;
+        line-height: 140%;
+        @include fluid(font-size, 16px, 20px);
+
+        @media (min-width: 1366px) {
+            max-height: 112px;
+            height: 100%;
+        }
+
+        @media ((max-width: 768px) and (min-width: 521px)) {
+            text-align: center;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 16px;
+        }
+    }
+
+    &__img {
+        @include fluid(width, 429px, 601px, 768px);
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
+                width: 361px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__button {
+        width: 264px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 350px) {
+            margin-top: 25px;
+        }
+    }
+
+    &__partner {
+        width: 100%;
+        margin-top: 70px;
+        @include flex-row-center;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 1024px) {
+        margin-top: 100px;
+    }
+    
+    @media (max-width: 480px) {
+        margin-top: 70px;
+    }
+}

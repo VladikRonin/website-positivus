@@ -1,0 +1,21 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.swiper {
+
+    &__inner {
+        border-radius: 45px;
+        background-color: $dark;
+    }
+
+    &.testimonials-slider {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    &-testimonials-slide {
+        max-width: 606px;
+        width: 100%;
+    }
+}

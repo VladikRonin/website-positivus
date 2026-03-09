@@ -1,0 +1,138 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: $white;
+
+    &__inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: $white;
+        max-width: 1240px;
+        // width: 100%;
+        background-color: $white;
+        @include flex-row-center;
+
+        @media (max-width: 1080px) {
+            justify-content: space-between;
+        }
+
+        @media (max-width: 1200px) {
+            padding-top: 22.5px;
+            padding-bottom: 22.5px;
+        }
+
+        @media (max-width: 520px) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+
+    &__logo {
+        width: 219.5px;
+        height: 36px;
+
+        @media (max-width: 520px) {
+            width: 144px;
+            height: 24px;
+        }
+    }
+
+    &__menu {
+        margin-left: 167px;
+
+        &-link {
+            display: inline-block;
+            height: 28px;
+            line-height: 28px;
+            font-size: 20px;
+        }
+
+        @media (max-width: 1366px) {
+            margin-left: auto;
+        }
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__button {
+        margin-left: auto;
+        @include fluid(min-width, 190px, 231px, 1024px);
+        
+        @media (max-width: 1280px) {
+            margin-left: auto;
+        }
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+    
+    &__burger {
+        display: none;
+        width: 24px;
+        height: 16px;
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+
+        & span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $black;
+            border-radius: 2px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .3s ease;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $black;
+            border-radius: 2px;
+            left: 0;
+            transition: all .3s ease;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &.active span {
+            transform: scale(0);
+        }
+
+        &.active::before {
+            top: 50%;
+            transform: rotate(45deg) translateY(-50%);
+        }
+
+        &.active::after {
+            bottom: 50%;
+            transform: rotate(-45deg) translateY(50%);
+        }
+
+        @media (max-width: 1024px) {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,219 @@
+@use '../utils/vars' as *;
+
+.case-studies {
+    margin-top: 163.5px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        @media (max-width: 950px) {
+            height: fit-content;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        @media (max-width: 950px) {
+            background-color: $white;
+            
+        }
+    }
+
+    &__title span {
+        @media (max-width: 950px) {
+            background-color: $green;
+            border-radius: 7px;
+            padding: 3px 7px;
+            box-decoration-break: clone;
+            line-height: 51px;
+        }
+    }
+
+    &__description {
+        max-width: 580px;
+    }
+
+    &__list {
+        margin-top: 80px;
+        padding: 70px 60px;
+        border-radius: 45px;
+        display: flex;
+        flex-direction: row;
+        background-color: $dark;
+        align-items: stretch;
+
+        @media (max-width: 1100px) {
+            padding: 42px 50px;
+        }
+
+        @media (max-width: 950px) {
+            background-color: $white;
+            padding: 0;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 480px) {
+            flex-direction: row;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            flex-wrap: nowrap;
+            scroll-snap-type: x mandatory;
+            border-radius: 0;
+            gap: 20px;
+
+            &:not(:first-child) {
+                margin-left: calc(-50vw + 50%);
+                margin-right: calc(-50vw + 50%);
+                padding-left: calc(50vw - 50%);
+                padding-right: 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            &:not(:first-child) {
+                padding-right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            margin-top: 40px;
+        }
+    }
+
+    &__item:not(:last-child) {
+        border-right: 1px solid $white;
+
+        @media (max-width: 950px) {
+            border-right: none;
+        }
+    }
+
+    &__item:not(:first-child):not(:last-child) {
+        padding: 0 64px;
+
+        @media (max-width: 1100px) {
+            padding: 0 48px;
+        }
+
+        @media (max-width: 950px) {
+            padding: 42px 50px;
+        }
+
+        @media (max-width: 400px) {
+            padding: 26px 35px;
+        }
+    }
+
+    &__item:first-child {
+        padding-right: 64px;
+
+        @media (max-width: 1100px) {
+            padding-right: 48px;
+        }
+
+        @media (max-width: 950px) {
+            padding: 42px 50px;
+        }
+
+        @media (max-width: 400px) {
+            padding: 26px 35px;
+        }
+    }
+
+    &__item:last-child {
+        padding-left: 64px;
+
+        @media (max-width: 1100px) {
+            padding-left: 48px;
+        }
+
+        @media (max-width: 950px) {
+            padding: 42px 50px;
+        }
+
+        @media (max-width: 480px) {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 400px) {
+            padding: 26px 35px;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        flex: 1;
+
+        @media (max-width: 950px) {
+            background-color: $dark;
+            border-radius: 45px;
+            width: auto;
+            flex: none;
+            flex-shrink: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 480px) {
+            width: 350px;
+            scroll-snap-align: center;
+        }
+
+        @media (max-width: 400px) {
+            width: 320px;
+        }
+
+        @media (max-width: 350px) {
+            width: 280px;
+        }
+
+        @media (max-width: 330px) {
+            width: 250px;
+        }
+    }
+
+    &__text {
+        max-width: 286px;
+        width: 100%;
+        line-height: 130%;
+        margin-bottom: 20px;
+        color: $white;
+
+        @media (max-width: 400px) {
+            font-size: 14px;
+        }
+    }
+
+    &__link {
+        width: fit-content;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        color: $green;
+        outline: none; 
+        text-decoration: none;
+
+        &:focus-visible {
+            outline: 2px solid $green;
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 18px;
+        }
+    }
+
+    &__label {
+        font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 83.5px;
+    }
+}

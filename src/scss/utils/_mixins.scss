@@ -1,0 +1,20 @@
+@use "sass:math";
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin fluid($property, $min-size, $max-size, $min-width: 430px, $max-width: 1440px) {
+
+  $min-rem: math.div($min-size, 16px);
+  $max-rem: math.div($max-size, 16px);
+
+  $slope: math.div($max-size - $min-size, $max-width - $min-width);
+  $y-intersection: -1 * $min-width * $slope + $min-size;
+
+  $fly-value: #{math.div($y-intersection, 16px)}rem + " + " + #{$slope * 100}vw;
+
+  #{$property}: clamp(#{$min-rem}rem, #{$fly-value}, #{$max-rem}rem);
+}

@@ -1,0 +1,221 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.footer {
+    margin-top: 140px;
+    min-height: 500px;
+    height: 100%;
+
+    &__inner {
+        padding: 55px 60px 50px 60px;
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px;
+        background-color: $dark;
+
+        @media (max-width: 1100px) {
+            padding: 55px 30px 50px 30px;
+        }
+
+        @media (max-width: 900px) {
+            padding: 50px 0 30px 0;
+        }
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        width: 180px;
+        height: 29px;
+
+        @media (max-width: 900px) {
+            width: 144px;
+            height: 24px;
+        }
+    }
+
+    &__menu-list {
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+            margin-top: 37px;
+        }
+    }
+
+    &__menu-link {
+        font-size: 18px;
+        color: $white;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+
+        @media (max-width: 900px) {
+            text-decoration: none;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+
+    &__icons--mobile {
+        display: none;
+
+        @media (max-width: 900px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 37px;
+        }
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__menu-list {
+
+        @media (max-width: 1100px) {
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            gap: 15px;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 185px;
+        margin-top: 68px;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 37px;
+            margin-top: 37px;
+        }
+    }
+
+    &__subtitle {
+        @include fluid(font-size, 18px, 20px);
+        padding: 0 7px;
+        width: fit-content;
+        background-color: $green;
+        border-radius: 7px;
+    }
+
+    &__contacts {
+
+        @media (max-width: 1100px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 900px) {
+            align-items: center;
+        }
+    }
+
+    &__description {
+        margin-top: 28px;
+
+        @media (max-width: 900px) {
+            margin-top: 37px;
+            text-align: center;
+        }
+    }
+
+    &__text {
+        color: $white;
+        margin-top: 20px;
+        line-height: 130%;
+
+        @media (max-width: 900px) {
+            margin-top: 15px;
+        }
+    }
+
+    &__form {
+        background-color: $dark-grey;
+        border-radius: 14px;
+        padding: 58px 40px;
+
+        @media (max-width: 900px) {
+            width: 390px;
+            height: 216px;
+            padding: 30px;
+        }
+
+        @media (max-width: 415px) {
+            width: 100%;
+            padding: 15px;
+        }
+    }
+
+    &__img-facebook {
+        filter: invert(100%);
+    }
+
+    &__bottom {
+        border-top: 1px solid $white;
+        margin-top: 50px;
+        padding-top: 53px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 40px;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 37px;
+            padding-top: 37px;
+        }
+    }
+
+    &__rights,
+    &__privacy {
+        color: $white;
+        text-align: center
+    }
+
+    &__privacy {
+        @include fluid(font-size, 16px, 18px);
+        text-decoration: underline;
+        text-underline-offset: 6px;
+
+        @media (max-width: 900px) {
+            text-decoration: none;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        background-color: $dark;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 90px;
+    }
+}

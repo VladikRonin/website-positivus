@@ -1,0 +1,44 @@
+[
+    {
+        "img": "src/img/content/team/team__john-smith.webp",
+        "name": "John Smith",
+        "post": "CEO and Founder",
+        "link": "#",
+        "portfolio": "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy"
+    },
+    {
+        "img": "src/img/content/team/team__jane-doe.webp",
+        "name": "Jane Doe",
+        "post": "Director of Operations",
+        "link": "#",
+        "portfolio": "7+ years of experience in project management and team leadership. Strong organizational and communication skills"
+    },
+    {
+        "img": "src/img/content/team/team__michael-brown.webp",
+        "name": "Michael Brown",
+        "post": "Senior SEO Specialist",
+        "link": "#",
+        "portfolio": "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization"
+    },
+    {
+        "img": "src/img/content/team/team__emily-johnson.webp",
+        "name": "Emily Johnson",
+        "post": "PPC Manager",
+        "link": "#",
+        "portfolio": "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis"
+    },
+    {
+        "img": "src/img/content/team/team__brian-williams.webp",
+        "name": "Brian Williams",
+        "post": "Social Media Specialist",
+        "link": "#",
+        "portfolio": "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement"
+    },
+    {
+        "img": "src/img/content/team/team__sarah-kim.webp",
+        "name": "Sarah Kim",
+        "post": "Content Creator",
+        "link": "#",
+        "portfolio": "2+ years of experience in writing and editing. <br>Skilled in creating compelling, SEO-optimized content for various industries"
+    }
+]

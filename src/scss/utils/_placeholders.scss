@@ -1,0 +1,7 @@
+@use '../utils/vars' as *;
+
+%text-style {
+    font-family: $font-main;
+    color: $black;
+    font-weight: $font-weight-regular;
+}

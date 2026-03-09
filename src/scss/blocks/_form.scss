@@ -1,0 +1,142 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.form {
+
+    &__groups {
+        height: 457px;
+        margin-top: 46px;
+
+        @media (max-width: 600px) {
+            margin-top: 36px;
+
+            height: 100%;
+        }
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &:not(:first-child) {
+            margin-top: 30px;
+
+            @media (max-width: 600px) {
+                margin-top: 20px;
+            }
+        }
+
+        & label {
+            margin-bottom: 10px;
+            // letter-spacing: 150%;
+        }
+
+        & input,
+        & textarea {
+            max-width: 556px;
+            width: 100%;
+            padding-left: 30px;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        & input {
+            height: 59px;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        & textarea {
+            resize: none;
+            padding-top: 18px;
+            height: 190px;
+
+            @media (max-width: 600px) {
+                height: 132px;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 40px;
+
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    &__button--mobile {
+        display: none;
+
+        @media (max-width: 600px) {
+            display: flex;
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+
+    &__subscribe {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @media (max-width: 1100px) {
+            flex-direction: column;
+        }
+    }
+
+    &__email--dark-grey {
+        width: 285px;
+        height: 67px;
+        background-color: $dark-grey;
+        // background-color: $dark;
+        color: $white;
+        border: 1px solid $white;
+        border-radius: 14px;
+        padding: 22px 0 22px 35px;
+        font-size: 18px;
+
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+    }
+
+    &__email--dark-grey::placeholder {
+        color: $white;
+        opacity: 1;
+    }
+
+    &__button--green {
+        width: 249px;
+
+        @media (max-width: 1100px) {
+            width: 100%;
+        }
+    }
+}
+
+.radio {
+    display: flex;
+    gap: 35px;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__checkmark {
+        margin-left: 14px;
+    }
+
+    @media (max-width: 1100px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

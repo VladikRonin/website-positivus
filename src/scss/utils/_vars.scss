@@ -1,0 +1,15 @@
+@use '../base/fonts' as *;
+
+$font-main: 'SpaceGrotesk', sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+
+$white: rgba(255, 255, 255, 1);
+$grey: rgba(243, 243, 243, 1);
+$dark-grey: rgba(41, 42, 50, 1);
+
+$black: rgba(0, 0, 0, 1);
+$dark: rgba(25, 26, 35, 1);
+
+$green: rgba(185, 255, 102, 1);

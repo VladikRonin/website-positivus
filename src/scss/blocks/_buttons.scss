@@ -1,0 +1,100 @@
+@use '../utils/vars' as *;
+
+.button {
+    height: 68px;
+    min-width: 231px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $dark;
+    border-radius: 14px;
+    font-size: 20px;
+    line-height: 28px;
+    transition: .25s linear;
+    appearance: none;
+
+    &--black {
+        background-color: $dark;
+        color: $white;
+    
+        &:focus-visible {
+            outline: 2px solid $dark;
+            outline-offset: 4px;
+        }
+    }
+
+    &--green {
+        background-color: $green;
+        color: $black;
+
+        &:focus-visible {
+            outline: 2px solid $green;
+            outline-offset: 4px;
+        }
+    }
+
+    @media (hover: hover) {
+        &--black-alt-white:hover {
+            background-color: $white;
+            border-color: $dark;
+            color: $black;
+            transform: scale(1);
+        }
+        
+        &--black-alt-green:hover {
+            background-color: $green;
+            border-color: $green;
+            color: $dark;
+            transform: scale(1.1);
+
+            @media (max-width: 768px) {
+                transform: scale(1);
+            }
+        }
+
+        &--green-alt-white:hover {
+            background-color: $white;
+            transform: scale(1.1);
+
+            @media (max-width: 768px) {
+                transform: scale(1);
+            }
+        }
+
+        &--transparent-alt-black:hover {
+            background-color: $dark;
+            color: $white;
+        }
+    }
+
+    &--transparent-alt-black:active {
+        background-color: $dark;
+        color: $white;
+        transform: scale(0.95);
+    }
+
+    &--black-alt-white:active {
+        background-color: $white;
+        border-color: $dark;
+        color: $black;
+        transform: scale(0.95);
+    }
+
+    &--black-alt-green:active {
+        background-color: $green;
+        border-color: $green;
+        color: $dark;
+        transform: scale(1);
+        @media (max-width: 768px) {
+            transform: scale(0.95);
+        }
+    }
+
+    &--green-alt-white:active {
+        background-color: $white;
+        transform: scale(1);
+        @media (max-width: 768px) {
+            transform: scale(0.95);
+        }
+    }
+}

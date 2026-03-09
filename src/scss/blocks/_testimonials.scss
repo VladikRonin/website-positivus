@@ -1,0 +1,112 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.testimonials {
+    margin-top: 100px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            align-items: center;
+        }
+    }
+
+    &__description {
+        max-width: 473px;
+    }
+
+    &__swiper {
+        background-color: $dark;
+        border-radius: 45px;
+        height: 625px;
+        border-radius: 45px;
+        overflow: hidden;
+        margin-top: 80px;
+        overflow: hidden;
+        position: relative;
+        padding: 84px 0 68px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            margin-top: 40px;
+            width: 100%;
+            padding: 84px 30px 60px 30px;
+            height: 100%;
+            @include fluid(padding-top, 30px, 84px, 430px, 768px)
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 60px;
+    }
+}
+
+.testimonials__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include fluid(margin-top, 38px, 124px);
+    @include fluid(gap, 40px, 169px);
+
+    .arrow-prev, .arrow-next {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: #fff; // Цвет стрелок
+        transition: color 0.3s;
+
+        // Если стрелка заблокирована (начало/конец слайдера)
+        &.swiper-button-disabled {
+            opacity: 0.3;
+            cursor: auto;
+        }
+
+        @media (max-width: 400px) {
+            display: none;
+        }
+    }
+
+    // Стили для твоих звезд (пагинации)
+    .swiper-pagination {
+        height: 20px;
+        position: static; // Отменяем абсолютное позиционирование Swiper
+        width: auto !important;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+            background: transparent; // Убираем стандартный фон точки
+            opacity: 1;
+            color: #fff; // Цвет неактивной звезды
+            font-size: 20px;
+            margin: 0 5px !important;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &-active svg path {
+                fill: $green; // Цвет активной звезды
+            }
+        }
+
+        @media (max-width: 400px) {
+            gap: 5px;
+            flex-shrink: 0;
+        }
+    }
+
+    @media (max-width: 430px) {
+        justify-content: space-between;
+    }
+
+    @media (max-width: 400px) {
+        justify-content: center;
+        margin-top: 30px;
+    }
+}

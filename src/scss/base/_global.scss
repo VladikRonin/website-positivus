@@ -1,0 +1,43 @@
+@use '../utils/vars' as *;
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+
+    @media (max-width: 400px) {
+        padding: 0 10px;
+    }
+}
+
+input[type="radio"] {
+    width: 28px;
+    height: 28px;
+    appearance: none;
+    border: 1px solid $black;
+    border-radius: 29px;
+    display: grid;
+    place-content: center;
+    padding: 6px;
+    background-color: $white;
+
+    &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border-radius: 29px;
+        background-color: $green;
+        transform: scale(0);
+        transition: 0.2s transform ease-in-out;
+    }
+
+    &:checked::before {
+        transform: scale(1);
+    }
+}
+
+// * {
+//   outline: 1px solid red !important;
+// }

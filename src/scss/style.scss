@@ -1,0 +1,38 @@
+@use 'base/fonts';
+@use 'utils/vars';
+
+@use 'utils/mixins';
+@use 'utils/placeholders';
+
+@use '../../node_modules/modern-normalize/modern-normalize.css';
+
+@use 'base/reset';
+
+@use 'base/typography';
+
+@use 'base/global';
+
+// @use 'base/scrollbar';
+
+@use 'blocks/logo';
+@use 'blocks/buttons';
+@use 'blocks/form';
+
+
+@use 'blocks/header';
+@use 'blocks/nav';
+@use 'blocks/burger-menu';
+@use 'blocks/hero';
+@use 'blocks/partners';
+@use 'blocks/section__header';
+@use 'blocks/services';
+@use 'blocks/service-cards';
+@use 'blocks/proposal';
+@use 'blocks/case-studies';
+@use 'blocks/process';
+@use 'blocks/team';
+@use 'blocks/testimonials';
+@use 'blocks/swiper';
+@use 'blocks/review-cards';
+@use 'blocks/contacts';
+@use 'blocks/footer';
