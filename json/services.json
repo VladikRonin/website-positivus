@@ -2,49 +2,49 @@
   {
     "title": "Search engine<br>optimization",
     "bg": "grey",
-    "img": "./src/img/content/services/card_img_first.svg",
-    "imgMobile": "./src/img/content/services/card_img_first--mobile.svg",
+    "img": "./img/content/services/card_img_first.svg",
+    "imgMobile": "./img/content/services/card_img_first--mobile.svg",
     "link": "#",
-    "linkIcon": "./src/img/icons/services/services__link--black-green.svg"
+    "linkIcon": "./img/icons/services/services__link--black-green.svg"
   },
   {
     "title": "Pay-per-click<br>advertising",
     "bg": "green",
-    "img": "./src/img/content/services/card_img_second.svg",
-    "imgMobile": "./src/img/content/services/card_img_second--mobile.svg",
+    "img": "./img/content/services/card_img_second.svg",
+    "imgMobile": "./img/content/services/card_img_second--mobile.svg",
     "link": "#",
-    "linkIcon": "./src/img/icons/services/services__link--black-green.svg"
+    "linkIcon": "./img/icons/services/services__link--black-green.svg"
   },
   {
     "title": "Social Media<br>Marketing",
     "bg": "black",
-    "img": "./src/img/content/services/card_img_third.svg",
-    "imgMobile": "./src/img/content/services/card_img_third--mobile.svg",
+    "img": "./img/content/services/card_img_third.svg",
+    "imgMobile": "./img/content/services/card_img_third--mobile.svg",
     "link": "#",
-    "linkIcon": "./src/img/icons/services/services__link--white-black.svg"
+    "linkIcon": "./img/icons/services/services__link--white-black.svg"
   },
   {
     "title": "Email<br>Marketing",
     "bg": "grey",
-    "img": "./src/img/content/services/card_img_fourth.svg",
-    "imgMobile": "./src/img/content/services/card_img_fourth--mobile.svg",
+    "img": "./img/content/services/card_img_fourth.svg",
+    "imgMobile": "./img/content/services/card_img_fourth--mobile.svg",
     "link": "#",
-    "linkIcon": "./src/img/icons/services/services__link--black-green.svg"
+    "linkIcon": "./img/icons/services/services__link--black-green.svg"
   },
   {
     "title": "Content<br>Creation",
     "bg": "green",
-    "img": "./src/img/content/services/card_img_fifth.svg",
-    "imgMobile": "./src/img/content/services/card_img_fifth--mobile.svg",
+    "img": "./img/content/services/card_img_fifth.svg",
+    "imgMobile": "./img/content/services/card_img_fifth--mobile.svg",
     "link": "#",
-    "linkIcon": "./src/img/icons/services/services__link--black-green.svg"
+    "linkIcon": "./img/icons/services/services__link--black-green.svg"
   },
   {
     "title": "Analytics and<br>Tracking",
     "bg": "black",
-    "img": "./src/img/content/services/card_img_sixth.svg",
-    "imgMobile": "./src/img/content/services/card_img_sixth--mobile.svg",
+    "img": "./img/content/services/card_img_sixth.svg",
+    "imgMobile": "./img/content/services/card_img_sixth--mobile.svg",
     "link": "#",
-    "linkIcon": "./src/img/icons/services/services__link--white-black.svg"
+    "linkIcon": "./img/icons/services/services__link--white-black.svg"
   }
 ]

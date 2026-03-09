@@ -28,8 +28,8 @@
                 <h2 class="process__name">${s.name}</h2>
               </div>
               <button class="process__toggle" aria-label="Показать/скрыть текст">
-                <img src="src/img/icons/process/process__icon-minus.svg" alt="Закрыть текст" class="process__icon-minus">
-                <img src="src/img/icons/process/process__icon-plus.svg" alt="Открыть текст" class="process__icon-plus">
+                <img src="./img/icons/process/process__icon-minus.svg" alt="Закрыть текст" class="process__icon-minus">
+                <img src="./img/icons/process/process__icon-plus.svg" alt="Открыть текст" class="process__icon-plus">
               </button>
             </div>
             <div class="process__body">
@@ -48,7 +48,7 @@
                   <p class="team__post">${s.post}</p>
                 </div>
                 <a href="${s.link}" class="team__link" aria-label="Ссылка на LinkedIn">
-                  <img src="src/img/icons/team/team__linkedin-icon.svg" alt="Ссылка на LinkedIn" class="team__icon">
+                  <img src="./img/icons/team/team__linkedin-icon.svg" alt="Ссылка на LinkedIn" class="team__icon">
                 </a>
               </div>
               <p class="team__portfolio">${s.portfolio}</p>
