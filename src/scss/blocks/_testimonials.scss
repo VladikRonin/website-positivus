@@ -56,10 +56,9 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-        color: #fff; // Цвет стрелок
+        color: #fff;
         transition: color 0.3s;
 
-        // Если стрелка заблокирована (начало/конец слайдера)
         &.swiper-button-disabled {
             opacity: 0.3;
             cursor: auto;
@@ -70,10 +69,9 @@
         }
     }
 
-    // Стили для твоих звезд (пагинации)
     .swiper-pagination {
         height: 20px;
-        position: static; // Отменяем абсолютное позиционирование Swiper
+        position: static;
         width: auto !important;
         display: flex;
         align-items: flex-start;
@@ -82,16 +80,16 @@
         .swiper-pagination-bullet {
             width: 14px;
             height: 14px;
-            background: transparent; // Убираем стандартный фон точки
+            background: transparent;
             opacity: 1;
-            color: #fff; // Цвет неактивной звезды
+            color: #fff;
             font-size: 20px;
             margin: 0 5px !important;
             cursor: pointer;
             transition: 0.3s;
 
             &-active svg path {
-                fill: $green; // Цвет активной звезды
+                fill: $green;
             }
         }
 

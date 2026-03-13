@@ -35,3 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadServices();
 });
+
+// НЕ ИСПОЛЬЗУЕТСЯ

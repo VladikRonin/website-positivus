@@ -7,9 +7,9 @@ async function renderSection(jsonPath, containerSelector, templateRef) {
     try {
         const response = await fetch(jsonPath);
         const data = await response.json();
-        container.innerHTML = ''; // Очистка перед рендером
+        container.innerHTML = '';
         data.forEach(item => {
-            const html = templateRef(item); // Используем переданный шаблон
+            const html = templateRef(item);
             container.insertAdjacentHTML('beforeend', html);
         });
     }
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <h2 class="process__name">${item.name}</h2>
               </div>
               <button class="process__toggle" aria-label="Показать/скрыть текст">
-                <img src="src/img/icons/process/process__icon-minus.svg" alt="Закрыть текст" class="process__icon-minus">
-                <img src="src/img/icons/process/process__icon-plus.svg" alt="Открыть текст" class="process__icon-plus">
+                <img src="./img/icons/process/process__icon-minus.svg" alt="Закрыть текст" class="process__icon-minus">
+                <img src="./img/icons/process/process__icon-plus.svg" alt="Открыть текст" class="process__icon-plus">
               </button>
             </div>
             <div class="process__body">
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                   <p class="team__post">${item.post}</p>
                 </div>
                 <a href="${item.link}" class="team__link" aria-label="Ссылка на LinkedIn">
-                  <img src="src/img/icons/team/team__linkedin-icon.svg" alt="Ссылка на LinkedIn" class="team__icon">
+                  <img src="./img/icons/team/team__linkedin-icon.svg" alt="Ссылка на LinkedIn" class="team__icon">
                 </a>
               </div>
               <p class="team__portfolio">${item.portfolio}</p>
@@ -89,10 +89,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         `
     };
 
-    renderSection('/public/json/services.json', '.services__grid', template.services);
-    renderSection('/public/json/process.json', '.process__accordion', template.process);
-    renderSection('/public/json/team.json', '.team__list', template.team);
-    await renderSection('/public/json/testimonials.json', '.swiper-wrapper', template.testimonials);
+    renderSection('./json/services.json', '.services__grid', template.services);
+    renderSection('./json/process.json', '.process__accordion', template.process);
+    renderSection('./json/team.json', '.team__list', template.team);
+    await renderSection('./json/testimonials.json', '.swiper-wrapper', template.testimonials);
 
     initTestimonialsSwiper();
 });

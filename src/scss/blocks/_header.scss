@@ -13,8 +13,6 @@
         padding-bottom: 30px;
         background-color: $white;
         max-width: 1240px;
-        // width: 100%;
-        background-color: $white;
         @include flex-row-center;
 
         @media (max-width: 1080px) {
